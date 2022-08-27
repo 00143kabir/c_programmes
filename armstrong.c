@@ -1,30 +1,42 @@
 #include <stdio.h>
 #include <math.h>
+
+int power(int num,int pow){
+    int n=1;
+    for(int i=0;i<pow;i++){
+        n=n*num;   
+    }
+    return n;
+}
 void main () {
-    int i,count=0,num1,temp,sum=0,rem;
-    int num;
-    printf("enter the number here");
+    int i,j,temp,temp1,num,count=0,arm=0,rem=0;
+    printf("enter number ");
     scanf("%d",&num);
     temp=num;
-    num1=num;
-    while(num>0){
-        count++;
+    temp1=num;
 
+    while(num>0){
         num=num/10;
+        count++;
     }
-    printf("%d\n",count);
+    printf(" count : %d\n",count);
     while(temp>0){
         rem=temp%10;
-
-        sum=sum+pow(rem,count);
+        int powr =pow(rem,count);
+        arm=arm+powr;
         temp=temp/10;
-
+        printf("arm = %d   power = %d\n",arm,powr);
+       
     }
-    if (num1==sum){
-        printf("\n%d: is armstrong number ",sum);
+    //printf("number is :  : %d\n",arm);
+
+    if(temp1==arm){
+        //printf(" %d : no. is armstrong ",arm);
+
     }
     else{
-    printf("%d: is not armstrong number  ",sum);
+        //printf("%d : no. is not a armstrong number ",arm);
     }
+
 
 }
