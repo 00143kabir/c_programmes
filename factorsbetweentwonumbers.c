@@ -9,7 +9,7 @@ void main () {
 
     for(i=a;i<=b;i++){
         printf("factors of %d : ",i);
-        for(j=a;j<=b;j++){
+        for(j=a;j<=b/2;j++){
        
             if(i%j==0){
             
